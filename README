@@ -1,0 +1,18 @@
+This is the structure we want, for tests to be discoverable, and to run correctly in:
+ - emacs: M-x python-pytest-dispatch
+ - shell: pytest
+ - vscode: discover tests correctly (python plugin)
+
+pwgen/
+├── add.py:
+    > def add(a, b): 
+    >     return a + b
+├── __init__.py
+    > pass
+└── tests/
+    ├── __init__.py
+        > pass
+    ├── test_add.py
+        > from pwgen import add
+        > def test_df():
+        >     assert add.add(1, 2) == 3
