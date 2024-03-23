@@ -1,8 +1,15 @@
-This is the structure we want, for tests to be discoverable, and to run correctly in:
+#+setupfile: ~/.org-mode-goodies/setup.org
+
+*** Overview
+
+This code works correctly in:
  - emacs: M-x python-pytest-dispatch
  - shell: pytest
  - vscode: discover tests correctly (python plugin)
+*** Code structure:
+This structure keeps tests discoverable.
 
+#+begin_example
 pwgen/
 ├── add.py:
     > def add(a, b): 
@@ -16,3 +23,9 @@ pwgen/
         > from pwgen import add
         > def test_df():
         >     assert add.add(1, 2) == 3
+#+end_example
+*** For watch mode:
+#+begin_src bash
+pip install pytest-watch
+ptw
+#+end_src
